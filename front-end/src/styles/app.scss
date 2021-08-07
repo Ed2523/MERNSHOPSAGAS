@@ -1,0 +1,139 @@
+.main-wrapper{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    header{
+      min-height: 10vh;
+      background-color: rgba(59, 54, 54, 0.959);
+      color: white;
+      nav{
+        width: 80%;
+        min-height: 10vh;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center; 
+       
+        .title{
+          color: white; 
+          font-size: 2rem;
+          width: 50%;
+          display: flex;
+          justify-content: center;
+        }
+        .nav-links{
+          width: 50%;
+          list-style-type: none;
+          display: flex;
+          justify-content: flex-end;
+          li{
+    
+            a{
+              color: white;
+              text-decoration: none;
+              font-size: 2rem;
+              margin-left: 1rem;
+            }
+          }
+        }
+      }
+    }
+    .main-section{
+      min-height: 80vh;
+      font-size: 3rem;
+   .products-title{
+    width: 80%;
+    margin: auto;
+    font-size: 3.5rem;
+    font-weight: bold;
+    h1{
+      margin: 1rem 0;
+    }
+    }
+   .home-screen{
+        width: 80%;
+        margin: auto;
+        padding-bottom: 1rem;
+        display: grid;
+        gap:1rem;
+        grid-auto-rows: 30rem;
+        grid-template-columns: repeat(auto-fill, minmax(  17rem, 1fr));
+       
+      
+        .card{
+         color: whitesmoke;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-evenly;
+          border: .01rem solid  rgba(59, 54, 54, 0.616);
+       
+         .card-image{
+           width: 90%;
+           height: 60%;
+           
+         img{
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+          }  
+         }
+         .card-body{
+           height: 30%;
+           width: 90%;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-evenly;
+           color: black;
+          .product-name{
+            font-size: 2rem;
+            text-align: center;
+            font-weight: bold;
+          }
+          .reviews{
+            font-size: 1.8rem;
+            text-align: center;
+          }
+          .price{
+            font-size: 2.5rem;
+            text-align: center;
+            font-weight: bold;
+          }
+         }
+        
+        }
+      }
+     
+    }
+ 
+    footer{
+      min-height: 10vh;
+      background-color: rgba(59, 54, 54, 0.959);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h1{
+       color: white;
+       font-size: 1.5rem;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 800px){
+    .main-wrapper{
+      .main-section{
+        .home-screen{
+          grid-auto-rows: 45rem;
+          .card{
+            .card-body{
+               .product-name{
+               font-size: 2.7rem;
+             }
+            }
+          }
+     }
+      }
+     
+    }
+   
+}

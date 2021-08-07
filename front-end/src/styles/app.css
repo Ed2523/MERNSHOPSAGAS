@@ -1,0 +1,180 @@
+.main-wrapper {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-wrapper header {
+  min-height: 10vh;
+  background-color: rgba(59, 54, 54, 0.959);
+  color: white;
+}
+
+.main-wrapper header nav {
+  width: 80%;
+  min-height: 10vh;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-wrapper header nav .title {
+  color: white;
+  font-size: 2rem;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-wrapper header nav .nav-links {
+  width: 50%;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.main-wrapper header nav .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.main-wrapper .main-section {
+  min-height: 80vh;
+  font-size: 3rem;
+}
+
+.main-wrapper .main-section .products-title {
+  width: 80%;
+  margin: auto;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.main-wrapper .main-section .products-title h1 {
+  margin: 1rem 0;
+}
+
+.main-wrapper .main-section .home-screen {
+  width: 80%;
+  margin: auto;
+  padding-bottom: 1rem;
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 30rem;
+  -ms-grid-columns: (minmax(17rem, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+}
+
+.main-wrapper .main-section .home-screen .card {
+  color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border: 0.01rem solid rgba(59, 54, 54, 0.616);
+}
+
+.main-wrapper .main-section .home-screen .card .card-image {
+  width: 90%;
+  height: 60%;
+}
+
+.main-wrapper .main-section .home-screen .card .card-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main-wrapper .main-section .home-screen .card .card-body {
+  height: 30%;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: black;
+}
+
+.main-wrapper .main-section .home-screen .card .card-body .product-name {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.main-wrapper .main-section .home-screen .card .card-body .reviews {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.main-wrapper .main-section .home-screen .card .card-body .price {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.main-wrapper footer {
+  min-height: 10vh;
+  background-color: rgba(59, 54, 54, 0.959);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-wrapper footer h1 {
+  color: white;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 800px) {
+  .main-wrapper .main-section .home-screen {
+    grid-auto-rows: 45rem;
+  }
+  .main-wrapper .main-section .home-screen .card .card-body .product-name {
+    font-size: 2.7rem;
+  }
+}
+/*# sourceMappingURL=app.css.map */
