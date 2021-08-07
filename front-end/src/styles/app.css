@@ -130,7 +130,7 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  color: black;
+  color: #0e0d0d;
 }
 
 .main-wrapper .main-section .home-screen .card .card-body .product-name {
