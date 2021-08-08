@@ -5,14 +5,16 @@ import Product from '../components/Product';
 const HomeScreen = () => {
 
     return (
-        <div className='home-screen'>
-
-
-
-            {products.map((product) =>
-                <Product product={product} />
-            )}
-        </div>
+        <>
+            <div className=' home-screen-title'>
+                <h1 >LATEST PRODUCTS</h1>
+            </div>
+            <div className='home-screen'>
+                {products.map((product) =>
+                    <Product key={product._id} product={product} />
+                )}
+            </div>
+        </>
     )
 }
 

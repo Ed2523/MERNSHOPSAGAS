@@ -1,21 +1,27 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom'
+import Rating from './Rating';
+
+//Card that show a preview of the product information
 
 const Product = ({ product }) => {
     return (
 
         <div className='card'>
             <div className="card-image">
-                <a href={`/product/${product._id}`}>
+                <Link to={`/product/${product._id}`}>
                     <img src={product.image} alt="" />
-                </a>
+                </Link>
             </div>
             <div className="card-body">
-                <div className="product-name">
+                <Link className="product-name" to={`/product/${product._id}`} >
                     <p>{product.name}</p>
-                </div>
+                </Link>
+
                 <div className="reviews">
-                    <p>{product.rating} from {product.numReviews} </p>
+                    <Rating rating={product.rating} numReviews={product.numReviews} />
                 </div>
+
                 <div className="price">
                     <p>${product.price}</p>
                 </div>

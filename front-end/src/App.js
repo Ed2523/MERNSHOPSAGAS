@@ -1,25 +1,25 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomeScreen from './screens/HomeScreen';
+import ProductScreen from './screens/ProductScreen';
 import './styles/app.css';
 
-import products from './products'
 function App() {
-  console.log(products);
   return (
-    <div className='main-wrapper'>
-      <Header />
-      <main className='main-section'>
-        <div className='products-title'>
-          <h1 >LATEST PRODUCTS</h1>
-        </div>
+    <Router>
+      <div className='main-wrapper'>
+        <Header />
+        <main className='main-section'>
 
-        <HomeScreen />
+          <Route path='/' component={HomeScreen} exact />
+          <Route path='/product/:id' component={ProductScreen} />
 
-      </main>
-      <Footer />
-    </div>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
