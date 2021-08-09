@@ -15,7 +15,7 @@
   "scripts": {
     "server": "nodemon backend/server",
     "react": "npm start --prefix front-end",
-    "start": "concurrently \"npm run server\" \"npm run react\"",
+    "start-full": "concurrently \"npm run server\" \"npm run react\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
