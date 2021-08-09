@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Rating from '../components/Rating';
-import products from '../products';
+import axios from 'axios';
+
 
 
 //Show details about the product
 
-const ProductScreen = (props) => {
+const ProductScreen = ({ match }) => {
+    // match comes from props object
+    // const product = products.find(product => product._id === props.match.params.id)
 
-    const product = products.find(product => product._id === props.match.params.id)
-    console.log(product)
+    const [product, setProduct] = useState({});
+
+    useEffect(() => {
+        const getProduct = async () => {
+            const res = await axios.get(`/api/products/${match.params.id}`);
+            setProduct(res.data);
+        }
+        getProduct();
+    }, [match]);
+
+
+
     return (
         <div className='product-screen'>
             <Link className="go-back" to={'/'} >GO BACK</Link>

@@ -1,5 +1,31 @@
 {
   "dependencies": {
-    "react-bootstrap": "^1.6.1"
-  }
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
+  },
+  "name": "mernshop",
+  "version": "1.0.0",
+  "description": "ecommerce",
+  "main": "server.js",
+  "type": "module",
+  "devDependencies": {
+    "concurrently": "^6.2.1"
+  },
+  "scripts": {
+    "server": "nodemon backend/server",
+    "react": "npm start --prefix front-end",
+    "start": "concurrently \"npm run server\" \"npm run react\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ed2523/mernshop.git"
+  },
+  "author": "Ed Chvez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ed2523/mernshop/issues"
+  },
+  "homepage": "https://github.com/Ed2523/mernshop#readme"
 }
