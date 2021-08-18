@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+//The provider is a function from react redux that allows to use redux in all of our nested components
+import { Provider } from 'react-redux'
 import './styles/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
