@@ -12,12 +12,12 @@ const reducer = combineReducers({
     cart: cartReducer,
 })
 
-const cartItensFromStorage = localStorage.getItem('cartItems') ? JSON.parse(
-    localStorage.getItem('carItems')
+const cartItemsFromStorage = localStorage.getItem('cartItems') ? JSON.parse(
+    localStorage.getItem('cartItems')
 ) : []
 
 const initialState = {
-    cart: { cartItems: cartItensFromStorage },
+    cart: { cartItems: cartItemsFromStorage },
 }
 
 /*Redux Thunk middleware allows you to write action creators that 

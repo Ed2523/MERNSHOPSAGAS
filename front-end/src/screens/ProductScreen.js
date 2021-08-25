@@ -23,7 +23,7 @@ const ProductScreen = ({ match, history }) => {
 
 
     const addToCart = () => {
-        history.push(`/cart/${match.params.id}?qty=${qtyOfItems}`)
+        history.push(`/cart/${match.params.id}?quantity=${qtyOfItems}`)
     }
 
 
@@ -79,7 +79,9 @@ const ProductScreen = ({ match, history }) => {
                                             <select name='' id="Quantity" onClick={(e) => setQtyOfItems(e.target.value)}>
 
                                                 {
-
+                                                    //Array() creates an array with the lenght og countInStock
+                                                    //[...Array().keys] Creates other array with the keys of the first array
+                                                    //.map go through all the elements in the array and create a 'list' of options where x + 1 is the value and key of each element in the 'list'
                                                     [...Array(product.countInStock).keys()].map(x => (
                                                         <option key={x + 1} value={x + 1} >{x + 1}</option>
                                                     ))
