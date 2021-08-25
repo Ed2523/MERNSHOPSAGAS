@@ -38,7 +38,7 @@ const importData = async () => {
         const createdUsers = await User.insertMany(users); //Inserts users data into User
         const admin = createdUsers[0]._id // gives back the admin user in our users data that we inserted into User
         const sampleProducts = products.map(product => ({ ...product, user: admin }))/* this goes through each element in products,
-         keeps the dataa of each product object, 
+         keeps the data of each product object, 
          and inserts into each one
          the property user: admin
          admin is the first object in our users array referenced in line 37

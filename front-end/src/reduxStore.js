@@ -1,13 +1,24 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
+import { productListReducer, productDetailsReducer } from './reducers/productReducer'
+import { cartReducer } from './reducers/CartReducer'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
 //Reducer is like a robot that changes things in our store
 //combineReducers 
-const reducer = combineReducers({})
+const reducer = combineReducers({
+    productList: productListReducer,
+    productDetails: productDetailsReducer,
+    cart: cartReducer,
+})
 
+const cartItensFromStorage = localStorage.getItem('cartItems') ? JSON.parse(
+    localStorage.getItem('carItems')
+) : []
 
-const initialState = {}
+const initialState = {
+    cart: { cartItems: cartItensFromStorage },
+}
 
 /*Redux Thunk middleware allows you to write action creators that 
 return a function instead of an action. 
@@ -20,10 +31,7 @@ const middleware = [thunk]
 the first is the reducer that is a function in charge of making changes in our store,
 the second one is the initial state
 */
-const store = createStore(reducer, initialState,
-    composeWithDevTools(applyMiddleware(
-        [...middleware]
-    ))
+const reduxStore = createStore(reducer, initialState, composeWithDevTools(applyMiddleware(...middleware))
 )
 
-export default store
+export default reduxStore
