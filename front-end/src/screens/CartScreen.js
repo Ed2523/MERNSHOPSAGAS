@@ -35,8 +35,8 @@ const CartScreen = ({ match, location, history }) => {
                 </div>
 
                 <div className="checkout">
-                    <h1>Items in Cart: 12</h1>
-                    <h1>Total: $999.99</h1>
+                    <h1>Items in Cart: {cartItems.reduce((acumulator, item) => acumulator + item.quantity, 0)}</h1>
+                    <h1>Total: $ {cartItems.reduce((acumulator, item) => acumulator + (item.quantity * item.price), 0).toFixed(2)}</h1>
                     <button>CHECKOUT</button>
                 </div>
 
