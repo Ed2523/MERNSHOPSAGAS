@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 //Redux Thunk allow us to writte the function this way: = () => async () => {}
+//We receive id and quantity from the url
 export const addToCart = (id, quantity) => async (dispatch, getState) => {
     const { data } = await axios.get(`/api/products/${id}`)
 

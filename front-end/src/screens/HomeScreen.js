@@ -24,10 +24,11 @@ const HomeScreen = () => {
         //     getProducts()
         // }
 
+
+
         () => { dispatch(listProducts()) }
 
         , [dispatch])
-
 
 
     return (
