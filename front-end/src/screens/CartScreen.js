@@ -30,14 +30,14 @@ const CartScreen = ({ match, location, history }) => {
                     {cartItems.length === 0 ?
                         (<h1>NO ITEMS IN YOUR CART <Link to={'/'}>GO BACK</Link></h1>) :
 
-                        cartItems.map(item => <CartProduct key={item.product} id={item.product} img={item.image} price={item.price} name={item.name} quantity={item.quantity} countInStock={item.countInStock} />)
+                        cartItems.map(item => <CartProduct key={item.product} id={item.product} img={item.image} price={item.price} name={item.name} quantity={item.quantity} countInStock={item.countInStock} history={history} />)
                     }
                 </div>
 
                 <div className="checkout">
                     <h1>Items in Cart: {cartItems.reduce((acumulator, item) => acumulator + item.quantity, 0)}</h1>
                     <h1>Total: $ {cartItems.reduce((acumulator, item) => acumulator + (item.quantity * item.price), 0).toFixed(2)}</h1>
-                    <button>CHECKOUT</button>
+                    <button disabled={cartItems.length === 0} onClick={() => alert('test')}>CHECKOUT</button>
                 </div>
 
             </div>

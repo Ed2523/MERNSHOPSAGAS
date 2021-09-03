@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../actions/cartAction'
+import { removeFromCart } from '../actions/cartAction'
 
-const CartProduct = ({ id, img, name, quantity, price, countInStock }) => {
+const CartProduct = ({ id, img, name, quantity, price, countInStock, history }) => {
     const dispatch = useDispatch()
     let [test, setTest] = useState(true)
+
     return (
         <div className='product-cart'>
             <div className="product-cart-details image">
@@ -19,6 +21,7 @@ const CartProduct = ({ id, img, name, quantity, price, countInStock }) => {
 
                     dispatch(addToCart(id, Number(e.target.value)))
                     setTest(false)
+                    history.push('/cart')
                 }}>
 
                     {test ? (<option >{quantity}</option>) :
@@ -28,8 +31,11 @@ const CartProduct = ({ id, img, name, quantity, price, countInStock }) => {
                     }
                 </select>
             </div>
-            <div className="product-cart-details ">
-                <i className="fas fa-trash"></i>
+            <div className="product-cart-details " >
+                <i className="fas fa-trash" onClick={() => {
+                    dispatch(removeFromCart(id, quantity))
+                    history.push('/cart')
+                }}></i>
             </div>
         </div>
     )

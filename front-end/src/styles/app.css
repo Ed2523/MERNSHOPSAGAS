@@ -519,6 +519,10 @@
   text-align: center;
 }
 
+.product-cart-details .fas {
+  cursor: pointer;
+}
+
 .image {
   background-color: cadetblue;
   width: 20%;

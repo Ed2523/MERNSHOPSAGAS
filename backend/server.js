@@ -15,6 +15,7 @@ import connectToDb from './config/db.js'
 //Import our routes added to "app.use('/api/products')"
 import productRoutes from './routes/productRoutes.js'
 
+import userRoutes from './routes/userRoutes.js'
 
 //error middlewares
 import { notFound, errorHandler } from './middlewares/middlewareError.js'
@@ -24,6 +25,7 @@ import colors from 'colors';
 
 const app = express();
 
+app.use(express.json())
 dotenv.config();
 
 connectToDb();
@@ -32,6 +34,7 @@ app.get('/', (req, res) => {
     res.send('Api is running..')
 })
 app.use('/api/products', productRoutes)
+app.use('/api/users', userRoutes)
 
 //This below is a middleware that define an error message for non existen routes
 app.use(notFound)
