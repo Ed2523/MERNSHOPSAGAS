@@ -22,7 +22,7 @@ export const login = (email, password) => async (dispatch) => {
         })
 
 
-        localStorage.setItem('userInfo', JSON.stringify(data))
+        sessionStorage.setItem('userInfo', JSON.stringify(data))
 
     } catch (error) {
         dispatch({

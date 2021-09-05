@@ -360,6 +360,54 @@
   .name{
   width: 26%;
   }
+  .login-screen{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh;
+    margin: auto;
+  }
+  .form{
+    width: 80%;
+    min-height: 40vh;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 3.5rem;
+    a{
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      color: black;
+    }
+    input{
+      width: 25%;
+      background-color: rgba(197, 196, 196, 0.322);
+      border: none;
+      height: 3rem;
+      width: 40%;
+      padding-left: 1rem;
+    }
+   
+    .sign-in{
+      background-color: black;
+      color: white;
+      border: none;
+      padding: .2rem 1rem;
+      width: 25%;
+      cursor: pointer;
+      font-weight: bold;
+      transition: .2s ease-in-out;
+    }
+    .sign-in:hover{
+      background-color:white;
+      color:black;
+      transition: .2s ease-in-out;
+    }
+  }
 
  @media screen and (max-width: 724px){
 
@@ -464,6 +512,15 @@
    }
    .checkout{
      width: 100%;
+   }
+   .form{
+     width: 100%;
+     input{
+       width: 100%;
+     }
+     .sign-in{
+       width: 100%;
+     }
    }
 }
 
