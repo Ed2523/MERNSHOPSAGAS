@@ -25,10 +25,14 @@ import colors from 'colors';
 
 const app = express();
 
+
 app.use(express.json())
 dotenv.config();
 
 connectToDb();
+
+
+
 
 app.get('/', (req, res) => {
     res.send('Api is running..')
@@ -41,6 +45,7 @@ app.use(notFound)
 
 //Middleware to handle errors, help us to avoid receiving an html file with the error information, instead with get a message in a json format 
 app.use(errorHandler)
+
 
 
 

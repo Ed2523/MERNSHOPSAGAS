@@ -7,6 +7,7 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 
 //Reducer is like a robot that changes things in our store
 //combineReducers 
+//Remeber that you state us what you receive from the redecuer not the initial state
 const reducer = combineReducers({
     productList: productListReducer,
     productDetails: productDetailsReducer,

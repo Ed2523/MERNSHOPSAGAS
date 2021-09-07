@@ -53,8 +53,8 @@ export const listProductsDetails = (id) => async (dispatch) => {
         // And we dispatch the PRODUCT_DETAILS_FAIL action
         dispatch({
             type: 'PRODUCT_DETAILS_FAIL',
-            payload: error.response && error.response.data.message ?
-                error.response.data.message : error.message
+            payload: error.res && error.res.data.message ?
+                error.res.data.message : error.message
         })
     }
 
