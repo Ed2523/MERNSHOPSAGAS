@@ -84,7 +84,7 @@
       display: grid;
       gap:1rem;
       grid-auto-rows: 30rem;
-      grid-template-columns: repeat(auto-fill, minmax(  17rem, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(  20rem, 1fr));
     }
     .product-screen{
       width: 80%;
@@ -362,6 +362,7 @@
   }
   .login-screen{
     width: 80%;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -408,7 +409,50 @@
       transition: .2s ease-in-out;
     }
   }
-
+  .error-loading{
+    min-height: 5vh;
+    font-size: 2rem;
+    .error{
+      color: red;
+      margin-top: 1rem;
+  
+    }
+    .loading{
+        margin-top: 1rem;
+    }
+  }
+  .user{
+    position: relative;
+   transition: 4s ease-in-out;
+   .user-options{
+    height: 5rem;
+    width: 100%;
+    background-color: #433E43;
+    position: absolute;
+   display: none;
+   transition: 4s ease-in-out;
+   a{
+     color: white;
+     text-decoration: none;
+     transition: .1s ease-in-out;
+    }
+   a:hover{
+     color: #8b878b;
+     transition: .1s ease-in-out;
+   }
+  }
+  }
+  .user:hover .user-options{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: 2s ease-in-out;
+    
+  }
+ 
  @media screen and (max-width: 724px){
 
     .main-wrapper{
@@ -499,9 +543,7 @@
        .name{
          height: 10vh;
        }
-       .price{
-
-       }
+       
      }
     }
    .cart-info{

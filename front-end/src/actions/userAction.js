@@ -26,7 +26,7 @@ export const login = (email, password) => async (dispatch) => {
         })
 
         console.log(data)
-        sessionStorage.setItem('userInfo', JSON.stringify(data))
+        localStorage.setItem('userInfo', JSON.stringify(data))
 
     } catch (error) {
 
@@ -39,4 +39,9 @@ export const login = (email, password) => async (dispatch) => {
                     error.message,
         })
     }
+}
+
+export const userLogout = () => (dispatch) => {
+    sessionStorage.removeItem('userInfo')
+    dispatch({ type: 'USER_LOGOUT' })
 }

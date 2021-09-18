@@ -25,7 +25,7 @@ const userInfoFromStorage = sessionStorage.getItem('userInfo') ? JSON.parse(
 
 const initialState = {
     cart: { cartItems: cartItemsFromStorage },
-    userlogin: { userInfo: userInfoFromStorage }
+    userLogin: { userInfo: userInfoFromStorage }
 }
 
 /*Redux Thunk middleware allows you to write action creators that 

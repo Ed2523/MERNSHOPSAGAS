@@ -35,7 +35,10 @@ const Form = ({ location, history }) => {
     return (
 
         <>
-            {error && <h1>{error}</h1>}
+            <div className="error-loading">
+                {error && <h1 className='error'>{error}</h1>}
+                {loading && <h1 className='loading'>Loading...</h1>}
+            </div>
             <form className="form" onSubmit={submitHandler}>
                 <label >
                     <h1>Email Address:</h1>

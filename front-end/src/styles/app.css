@@ -119,8 +119,8 @@
   display: grid;
   gap: 1rem;
   grid-auto-rows: 30rem;
-  -ms-grid-columns: (minmax(17rem, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 }
 
 .main-wrapper .product-screen {
@@ -199,7 +199,7 @@
 }
 
 .main-wrapper .product-screen .product-details .product-information .product-name, .main-wrapper .product-screen .product-details .product-information .product-price {
-  font-size: 2rem;
+  font-size: 2.01rem;
   color: white;
   text-align: center;
 }
@@ -541,6 +541,7 @@
 
 .login-screen {
   width: 80%;
+  min-height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -606,6 +607,68 @@
   color: black;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
+}
+
+.error-loading {
+  min-height: 5vh;
+  font-size: 2rem;
+}
+
+.error-loading .error {
+  color: red;
+  margin-top: 1rem;
+}
+
+.error-loading .loading {
+  margin-top: 1rem;
+}
+
+.user {
+  position: relative;
+  -webkit-transition: 4s ease-in-out;
+  transition: 4s ease-in-out;
+}
+
+.user .user-options {
+  height: 5rem;
+  width: 100%;
+  background-color: #433E43;
+  position: absolute;
+  display: none;
+  -webkit-transition: 4s ease-in-out;
+  transition: 4s ease-in-out;
+}
+
+.user .user-options a {
+  color: white;
+  text-decoration: none;
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+}
+
+.user .user-options a:hover {
+  color: #8b878b;
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+}
+
+.user:hover .user-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  -webkit-transition: 2s ease-in-out;
+  transition: 2s ease-in-out;
 }
 
 @media screen and (max-width: 724px) {
