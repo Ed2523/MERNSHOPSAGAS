@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
 import Rating from '../components/Rating';
 import { listProductsDetails } from '../actions/productAction'
-import { set } from 'mongoose';
+
 
 //Show details about the product
 const ProductScreen = ({ match, history }) => {

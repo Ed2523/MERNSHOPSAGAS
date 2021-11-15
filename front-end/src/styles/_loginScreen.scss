@@ -1,0 +1,57 @@
+.login-screen{
+    width: 80%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh;
+    margin: auto;
+  }
+  .form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 3.5rem;
+    a{
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      color:rgb(31, 177, 104);
+      transition: .1s ease-in-out;
+    }
+    a:hover{
+      color:rgb(21, 212, 230);
+      transition: .1s ease-in-out;
+    }
+    input{
+      background-color: rgba(197, 196, 196, 0.322);
+      border: none;
+      height: 3rem;
+      width: 40%;
+      padding-left: 1rem;
+    }
+    label, button, h2{
+      margin: 1.3rem 0; 
+    }
+  
+   
+    .sign-in{
+      background-color: black;
+      color: white;
+      border: none;
+      padding: .2rem 1rem;
+      width: 25%;
+      cursor: pointer;
+      font-weight: bold;
+      transition: .2s ease-in-out;
+    }
+    .sign-in:hover{
+      background-color:white;
+      color:black;
+      transition: .2s ease-in-out;
+    }
+  }
+  //Error message when form submit fails
+  

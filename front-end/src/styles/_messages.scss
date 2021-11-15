@@ -1,0 +1,15 @@
+.error-loading{
+    min-height: 5vh;
+    font-size: 2rem;
+    .error{
+      color: red;
+      margin-top: 1rem;
+  
+    }
+    .loading{
+        margin-top: 1rem;
+    }
+  }
+  .success{
+      color: rgb(0, 199, 99);
+  }

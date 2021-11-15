@@ -28,7 +28,7 @@ const userSchema = mongoose.Schema({
 userSchema.methods.matchPassword = async function (enteredPassword) {
     return await bcrypt.compare(enteredPassword, this.password)
 }
-
+//This allow us to encrypt our password when we save our user
 userSchema.pre('save', async function (next) {
     // 
     if (!this.isModified('password')) {

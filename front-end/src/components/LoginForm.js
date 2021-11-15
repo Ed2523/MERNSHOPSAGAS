@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { login } from '../actions/userAction'
 
 
-const Form = ({ location, history }) => {
+const LoginForm = ({ location, history }) => {
 
 
 
@@ -42,7 +42,7 @@ const Form = ({ location, history }) => {
             <form className="form" onSubmit={submitHandler}>
                 <label >
                     <h1>Email Address:</h1>
-                    <input type="text"
+                    <input type="email"
                         name="email"
                         onChange={(e) => setEmail(e.target.value)}
                         value={email}
@@ -50,15 +50,15 @@ const Form = ({ location, history }) => {
                 </label>
                 <label >
                     <h1>Password:</h1>
-                    <input type="text"
+                    <input type="password"
                         name="password"
 
                         onChange={(e) => setPassword(e.target.value)}
                         value={password}
                         placeholder='Enter password' />
                 </label>
-                <button className='sign-in' type='submit'>SIGN IN</button>
-                <h2 >    <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>SIGN UP</Link>
+                <button className='sign-in' type='submit'>LOG IN</button>
+                <h2 >    <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>Register</Link>
                 </h2>
             </form >
         </>
@@ -66,4 +66,4 @@ const Form = ({ location, history }) => {
     )
 }
 
-export default Form
+export default LoginForm

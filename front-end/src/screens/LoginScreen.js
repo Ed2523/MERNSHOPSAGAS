@@ -1,10 +1,10 @@
-import Form from '../components/Form'
+import LoginForm from '../components/LoginForm'
 
 const LoginScreen = ({ location, history }) => {
 
     return (
         <div className='login-screen'>
-            <Form location={location} history={history} />
+            <LoginForm location={location} history={history} />
         </div>
     )
 }

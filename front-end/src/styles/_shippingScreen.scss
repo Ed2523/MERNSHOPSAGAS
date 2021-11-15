@@ -1,0 +1,13 @@
+.shipping-screen{
+    width: 80%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh;
+    margin: auto;
+    #shipping-title{
+        margin: 1rem 0;
+        font-size: 1.8rem
+    }
+  }

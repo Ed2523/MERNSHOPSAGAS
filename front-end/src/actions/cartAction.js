@@ -19,7 +19,7 @@ export const addToCart = (id, quantity) => async (dispatch, getState) => {
 
 
 
-    sessionStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems))
+    localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems))
 }
 
 
@@ -30,5 +30,5 @@ export const removeFromCart = (id) => (dispatch, getState) => {
             payload: id,
         }
     )
-    sessionStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems))
+    localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems))
 }

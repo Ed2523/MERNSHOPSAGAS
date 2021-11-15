@@ -1,0 +1,47 @@
+  .burger{
+     cursor: pointer;
+     z-index: 2;
+  }
+
+  //Burger animation
+  #burger-span1, #burger-span2, #burger-span3 {
+    padding: 0.15rem 1.8rem;
+    background: white;
+    margin: 0.7rem 0rem;
+    display: block;
+    transition:0.5s ease-in-out;
+  }
+  #burger-span1-open {
+    padding: 0.15rem 1.8rem;
+    background: white;
+    margin: 0.7rem 0rem;
+    display: block;
+    transition:0.5s ease-in-out;
+    transform: rotateZ(-45deg) translateY(450%);
+    transition:0.5s ease-in-out;
+  }
+  #burger-span2-open{
+    padding: 0.15rem 1.8rem;
+    background: white;
+    margin: 0.7rem 0rem;
+    display: block;
+    transition:0.5s ease-in-out;
+    transition:0.5s ease-in-out;
+    opacity: 0;
+  }
+  #burger-span3-open{
+    padding: 0.15rem 1.8rem;
+    background: white;
+    margin: 0.7rem 0rem;
+    display: block;
+    transition:0.5s ease-in-out;
+    transform: rotateZ(45deg) translateY(-450%);
+    transition:0.5s ease-in-out;
+}
+
+
+
+
+    
+
+

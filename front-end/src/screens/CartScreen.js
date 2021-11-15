@@ -28,7 +28,7 @@ const CartScreen = ({ match, location, history }) => {
             <div className="cart-info">
                 <div className="cart-product-list">
                     {cartItems.length === 0 ?
-                        (<h1>NO ITEMS IN YOUR CART <Link to={'/'}>GO BACK</Link></h1>) :
+                        (<h1 className='no-items'>NO ITEMS IN YOUR CART,<Link to={'/'}> WANT TO GO BACK?</Link></h1>) :
 
                         cartItems.map(item => <CartProduct key={item.product} id={item.product} img={item.image} price={item.price} name={item.name} quantity={item.quantity} countInStock={item.countInStock} history={history} />)
                     }

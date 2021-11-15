@@ -1,0 +1,92 @@
+header{
+    min-height: 10vh;
+    background-color: rgba(59, 54, 59, 0.959);
+    color: white;
+    position: relative;
+    nav{
+      width: 80%;
+      min-height: 10vh;
+      margin: auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; 
+     
+      .title{
+        color: white; 
+        font-size: 2rem;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        transition: .2s ease-in-out;
+        text-decoration: none;
+      }
+      .title:hover{
+        color: rgb(158, 153, 153); 
+        transition: .2s ease-in-out;
+      }
+     
+    }
+    .nav-links{
+      width: 50%;
+      list-style-type: none;
+      display: flex;
+      justify-content: flex-end;
+      li{
+        font-size: 3rem;
+        .fa-user{
+          margin-left: 1rem;
+        }
+        .fas{
+          font-size: 1.5rem;
+        }
+        a{
+          color: rgb(224, 210, 210);
+          text-decoration: none; 
+          margin-left: 1rem;
+          transition: .2s ease-in-out;
+        }
+        a:hover{
+          color: rgb(158, 153, 153); 
+          transition: .2s ease-in-out;
+        }
+      }
+    }
+  }
+
+
+
+
+  //Drop menu
+  .user{
+    position: relative;
+   transition: 4s ease-in-out;
+   .user-options{
+    height: 5rem;
+    width: 10rem;
+    background-color: #433E43;
+    position: absolute;
+   display: none;
+   transition: 4s ease-in-out;
+   a{
+     color: white;
+     text-decoration: none;
+     transition: .1s ease-in-out;
+    }
+   a:hover{
+     color: #8b878b;
+     transition: .1s ease-in-out;
+   }
+  }
+  }
+  .user:hover .user-options{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: 2s ease-in-out;
+    
+  }
+ 

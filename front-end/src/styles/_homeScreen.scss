@@ -1,0 +1,20 @@
+.home-screen-title{
+    width: 80%;
+    margin: auto;
+    font-size: 3rem;
+    font-weight: bold;
+    min-height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .7rem 0; 
+  }
+  .home-screen{
+    width: 80%;
+    margin: auto;
+    padding-bottom: 1rem;
+    display: grid;
+    gap:1rem;
+    grid-auto-rows: 30rem;
+    grid-template-columns: repeat(auto-fill, minmax(  20rem, 1fr));
+  }

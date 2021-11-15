@@ -1,0 +1,62 @@
+ 
+ .profile-container{
+    width: 80%;
+    margin: auto;
+    min-height: 80vh;
+    display: flex;
+  }
+  .user-profile-info{
+    width: 50%;
+    min-height: 80vh;
+    .form{
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 3.5rem;
+      a{
+        font-size: 1.5rem;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+        color:rgb(31, 177, 104);
+        transition: .1s ease-in-out;
+      }
+      a:hover{
+        color:rgb(21, 212, 230);
+        transition: .1s ease-in-out;
+      }
+      input{
+        background-color: rgba(197, 196, 196, 0.322);
+        border: none;
+        height: 3rem;
+        width: 80%;
+        padding-left: 1rem;
+      }
+      label, button, h2{
+        margin: 1.3rem 0; 
+      }
+    
+     
+      .update{
+        background-color: black;
+        color: white;
+        border: none;
+        padding: .2rem 1rem;
+        width: 80%;
+        cursor: pointer;
+        font-weight: bold;
+        transition: .2s ease-in-out;
+      }
+      .update:hover{
+        background-color:white;
+        color:black;
+        transition: .2s ease-in-out;
+      }
+    }
+  }
+  .orders{
+    min-height: 80vh;
+    width: 50%;
+    background-color: rgba(19, 67, 179, 0.692);
+  }
