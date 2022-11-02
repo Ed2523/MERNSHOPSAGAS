@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 
 
 const connectToDb = async () => {
+    
     try {
         //mongoose.connect() method allow us to connects to our mongo db
         const mongCon = await mongoose.connect(
@@ -10,6 +11,7 @@ const connectToDb = async () => {
             /*we are using process.env to access our enviroment var in .env
             this thanks to our dotenv module that is runnning on our server.js 
             */
+          
             process.env.MONGO_CONNECTION, //MONGO_CONNECTION is a uri to our db in mongodb atlas
             {
                 useUnifiedTopology: true,

@@ -55,7 +55,7 @@ const Header = () => {
     return (
         <header  >
             <nav>
-                <Link className='title' to={`/`} >SHOP</Link>
+                <Link className='title' to={`/`} >EDS SHOP</Link>
 
                 {   //If we are in mobile view
                     mobileView ?
